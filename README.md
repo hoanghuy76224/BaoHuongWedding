@@ -1,13 +1,15 @@
 # Văn Bảo & Kim Hương
 
-Adapted directly from `hoanghuy76224/HoangNhuWedding` as requested. The original CSS, floral gate, wax seal, opening video, cinematic scenes, animations, VI/EN controls, RSVP form and integrated admin layout are retained.
+Dựng lại từ khung thiệp `hoanghuy76224/HoangNhuWedding`: cấu trúc cảnh phim, VI/EN, RSVP, lưu bút, trang `#admin`.
 
-Only couple names, parents, photographs, venue and event times are changed. A QR gift envelope is added after the RSVP section. The previous custom redesign is no longer used.
+Khác với Hoàng Như:
+- Opening: video mẫu Canva Dark Blue and Gold (phong bì navy, dấu sáp), `intro.mp4`. Chạm con dấu sáp để phát.
+- Tông màu navy, vàng đồng, tím oải hương. Các chương và màn Fin nền navy.
+- Câu chữ viết riêng cho đám cưới này.
+- Bao lì xì mừng cưới làm từ mẫu Canva Đỏ Vàng Truyền Thống (`lixi-front.webp`, `lixi-flap.webp`), mở ra hiện QR MB Bank 0935857258 của cô dâu.
 
-Reception: Sunday 13 December 2026. Guest arrival 11:00, reception 12:00. Vườn Cau, Hall 7 – Lily, 360 Phan Văn Trị, P. Bình Lợi Trung, TP.HCM.
+Lễ báo hỷ: Chủ Nhật 13/12/2026, đón khách 11:00, khai tiệc 12:00. Vườn Cau, Sảnh 7 Lily, 360 Phan Văn Trị, P. Bình Lợi Trung, TP.HCM.
 
-Personalized links use `?to=`. The administration view is `#admin`. RSVP and invitation namespaces are `rsvp_baohuong` and `invites_baohuong`, separate from Hoàng–Như. Firebase rules for `rsvp_baohuong` permit public reads and validated RSVP creation, with updates disabled and deletion restricted to authenticated project administrators. Existing collections and rules are unchanged. New personalized links use `?to=` and do not need database writes. The inherited front-end admin password is only a UI gate, not server-side authorization.
+RSVP: Firestore collection `rsvp_baohuong`. Link riêng dùng `?to=`. Nhạc nền `music.m4a` nằm trong repo.
 
-The opening video is stored in this repo. Background music currently references the original site's music file. Photos are from the supplied Drive album. QR is rendered for MB Bank account 0935857258 from the bride's supplied details; bank account ownership has not been looked up.
-
-Static publishing: GitHub Pages, branch main, root directory. No build needed. Original design credit: HoangNhuWedding / Dino Studio.
+Bản hiện tại có nhãn BẢN XEM THỬ (`#previewTag` trong index.html). Khách thanh toán xong thì xoá dòng đó.

@@ -1,9 +1,13 @@
-(function(){'use strict';const $=id=>document.getElementById(id);
-let giftOpen=false;
-function toggleGift(){giftOpen=!giftOpen;$('giftStage').classList.toggle('open',giftOpen);$('giftCard').setAttribute('aria-hidden',String(!giftOpen));$('giftCard').inert=!giftOpen;for(const id of ['openGift','giftToggle'])$(id).setAttribute('aria-expanded',String(giftOpen));$('giftToggle').textContent=giftOpen?'ĐÓNG BAO LÌ XÌ':'CHẠM ĐỂ MỞ BAO LÌ XÌ';}
-$('openGift').onclick=toggleGift;$('giftToggle').onclick=toggleGift;
-$('copyAccount').onclick=async()=>{try{await navigator.clipboard.writeText('0935857258');$('giftStatus').textContent='Đã sao chép số tài khoản.';}catch{$('giftStatus').textContent='Số tài khoản: 0935857258';}};
-$('saveQR').onclick=async()=>{const button=$('saveQR');button.disabled=true;try{const res=await fetch($('giftQR').src);if(!res.ok)throw Error('qr');const blob=await res.blob();const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='QR-Kim-Huong.png';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);$('giftStatus').textContent='Đã tải mã QR.';}catch{window.open($('giftQR').src,'_blank','noopener');$('giftStatus').textContent='Nhấn giữ mã QR để lưu ảnh.';}finally{button.disabled=false;}};
-$('giftQR').addEventListener('error',()=>{$('giftStatus').textContent='Chưa tải được QR. Bạn có thể sao chép số tài khoản bên dưới.';});
-
+(function(){'use strict';var $=function(id){return document.getElementById(id);};
+var open=false;
+function T(vi,en){return (window.LANG==='en')?en:vi;}
+function toggle(){open=!open;$('giftStage').classList.toggle('open',open);$('giftCard').setAttribute('aria-hidden',String(!open));$('giftCard').inert=!open;
+['openGift','giftToggle'].forEach(function(id){$(id).setAttribute('aria-expanded',String(open));});
+$('giftToggle').textContent=open?T('ĐÓNG BAO LÌ XÌ','CLOSE THE ENVELOPE'):T('CHẠM ĐỂ MỞ BAO LÌ XÌ','TAP TO OPEN THE ENVELOPE');}
+$('openGift').onclick=toggle;$('giftToggle').onclick=toggle;
+$('copyAccount').onclick=function(){var ok=function(){$('giftStatus').textContent=T('Đã chép số tài khoản.','Account number copied.');};
+try{navigator.clipboard.writeText('0935857258').then(ok,function(){$('giftStatus').textContent='MB Bank · 0935857258';});}catch(e){$('giftStatus').textContent='MB Bank · 0935857258';}};
+$('saveQR').onclick=function(){var b=this;b.disabled=true;fetch($('giftQR').src).then(function(r){if(!r.ok)throw 0;return r.blob();}).then(function(blob){
+var u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='QR-Kim-Huong.png';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},60000);
+$('giftStatus').textContent=T('Đã tải mã QR.','QR saved.');}).catch(function(){$('giftStatus').textContent=T('Nhấn giữ mã QR để lưu ảnh.','Press and hold the QR to save it.');}).then(function(){b.disabled=false;});};
 })();

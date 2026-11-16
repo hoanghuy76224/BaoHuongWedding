@@ -942,7 +942,7 @@
     .story-transition [data-photo="s1"]{background-position:center 32%}
   }
 </style>
-<link rel="stylesheet" href="gift.css?v=4"><style>
+<link rel="stylesheet" href="gift.css?v=5"><style>
 .memory-story{background:#f5efe5;color:#273453;padding:clamp(56px,9vw,110px) 24px;scroll-margin-top:60px}
 .memory-story h2,.memory-story p{max-width:620px;margin:0 auto}
 .memory-story h2{font:500 clamp(32px,5vw,54px)/1.12 'Fraunces',serif;margin-bottom:30px}
@@ -1215,6 +1215,7 @@
   <p class="desc" data-en="Your presence is the best gift. If you are far away and would still like to send your wishes, open the envelope below.">Bạn đến chung vui là quý lắm rồi. Ai ở xa không về kịp mà vẫn muốn gửi chút lộc mừng, mở bao lì xì bên dưới nhé.</p>
   <div class="lx-stage" id="giftStage">
    <div class="lx-env">
+    <div class="lx-card-window">
     <div class="lx-card" id="giftCard" aria-hidden="true" inert>
      <span class="lx-eyebrow" data-en="FOR THE BRIDE &amp; GROOM">Mừng cưới cô dâu &amp; chú rể</span>
      <h3>Lê Thị Kim Hương</h3>
@@ -1223,6 +1224,7 @@
      <div class="lx-actions"><button id="copyAccount" type="button" data-en="Copy number">Chép số TK</button><button id="saveQR" type="button" data-en="Save QR">Lưu mã QR</button></div>
      <p class="lx-status" id="giftStatus" aria-live="polite"></p>
     </div>
+    </div>
     <img class="lx-front" src="lixi-front.webp?v=2" alt="Bao lì xì Trăm năm hạnh phúc, Bảo và Hương">
     <img class="lx-flap" src="lixi-flap.webp?v=1" alt="">
     <button id="openGift" class="lx-hit" type="button" aria-expanded="false" aria-controls="giftCard" aria-label="Mở bao lì xì xem mã QR"></button>
@@ -1230,7 +1232,7 @@
   </div>
   <button class="lx-toggle" id="giftToggle" type="button" aria-expanded="false" aria-controls="giftCard" data-en="TAP TO OPEN THE ENVELOPE">CHẠM ĐỂ MỞ BAO LÌ XÌ</button>
  </section>
-<script src="gift.js?v=4"></script>
+<script src="gift.js?v=5"></script>
 <script>
 (function(){var g=document.getElementById('alGrid'),btn=document.getElementById('alMore'),box=document.getElementById('alBox'),img=document.getElementById('alImg'),cnt=document.getElementById('alCount');
 var items=[].slice.call(g.querySelectorAll('.al-item')),i=0,x0=null;

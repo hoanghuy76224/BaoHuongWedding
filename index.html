@@ -940,7 +940,17 @@
 .memory-story p{font:400 clamp(18px,2vw,22px)/1.65 'Fraunces',serif;margin-bottom:1em}
 @media (max-aspect-ratio:1/1){.scene[data-scene="09"]{max-height:150vw}.scene [data-photo="s3"]{background-position:69% center!important}}
 </style>
-<style>.memory-photo{max-width:800px;margin:32px auto}.memory-photo img{width:100%;height:auto;display:block}.memory-frame{position:relative}.memory-pin{position:absolute;bottom:59%;border-radius:3px;padding:3px 7px;background:#fff7e9;color:#263454;font:600 clamp(10px,1.4vw,14px)/1.2 sans-serif}.memory-pin:after{content:"";position:absolute;top:100%;border:4px solid transparent;border-top-color:#fff7e9}.groom-pin{right:30.4%}.groom-pin:after{right:0}.bride-pin{left:74.6%}.bride-pin:after{left:0}.memory-photo figcaption{max-width:620px;margin:22px auto 0;font:italic 19px/1.6 'Fraunces',serif}</style></head>
+<style>.memory-photo{max-width:800px;margin:32px auto}.memory-photo img{width:100%;height:auto;display:block}.memory-frame{position:relative}.memory-pin{position:absolute;bottom:59%;border-radius:3px;padding:3px 7px;background:#fff7e9;color:#263454;font:600 clamp(10px,1.4vw,14px)/1.2 sans-serif}.memory-pin:after{content:"";position:absolute;top:100%;border:4px solid transparent;border-top-color:#fff7e9}.groom-pin{right:30.4%}.groom-pin:after{right:0}.bride-pin{left:74.6%}.bride-pin:after{left:0}.memory-photo figcaption{max-width:620px;margin:22px auto 0;font:italic 19px/1.6 'Fraunces',serif}</style><style>
+.memory-photo:has(.memory-frame){overflow:hidden}
+@media (prefers-reduced-motion:no-preference){
+  .memory-frame.is-revealing{transform-origin:72% 44%;animation:findCouple 2s .9s ease-in-out both}
+  .memory-frame.is-revealing .memory-pin{animation:showMemoryName .55s 2s ease-out both}
+  .memory-frame.is-revealing .bride-pin{animation-delay:2.18s}
+  @keyframes findCouple{from{transform:scale(1)}to{transform:scale(1.65)}}
+  @keyframes showMemoryName{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+}
+</style>
+</head>
 <body>
 <div id="previewTag">BẢN XEM THỬ</div>
 <div id="leader">
@@ -1795,5 +1805,29 @@ box.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changed
 })();
 </script>
 
+<script>
+(function () {
+  const frame = document.querySelector('.memory-frame');
+  if (!frame || !('IntersectionObserver' in window)) return;
+  const observer = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      frame.classList.add('is-revealing');
+      observer.disconnect();
+    }
+  }, { threshold: .45 });
+  const intro = document.getElementById('leader');
+  if (!intro || intro.classList.contains('gone')) {
+    observer.observe(frame.parentElement);
+    return;
+  }
+  const afterIntro = new MutationObserver(() => {
+    if (intro.classList.contains('gone')) {
+      afterIntro.disconnect();
+      observer.observe(frame.parentElement);
+    }
+  });
+  afterIntro.observe(intro, { attributes:true, attributeFilter:['class'] });
+})();
+</script>
 </body>
 </html>

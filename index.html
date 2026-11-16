@@ -913,6 +913,24 @@
   @media (max-width:600px){.scene .subtitle{width:80%!important;bottom:calc(5.5vh + 120px)!important}}
   @media (min-aspect-ratio:1/1){.hero-scene .scene-img{background-position:center 30%!important}}
   @media (max-width:600px){#previewTag{top:calc(env(safe-area-inset-top) + 50px)!important}}
+  .album-scene{background:#f6efe6;padding:14vh 14px 12vh;text-align:center}
+  .album-scene .head{font-family:'Archivo',sans-serif;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--film-warm);margin-bottom:16px}
+  .album-scene h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(32px,6.5vw,52px);color:var(--film-cream);margin-bottom:34px}
+  .album-scene h2 em{color:var(--film-warm)}
+  .al-grid{columns:2;column-gap:8px;max-width:1100px;margin:0 auto}
+  @media (min-width:900px){.al-grid{columns:3;column-gap:12px}}
+  .al-item{display:block;break-inside:avoid;margin-bottom:8px;border-radius:4px;overflow:hidden;background:#ebe5ee}
+  .al-item img{width:100%;height:auto;display:block;transition:transform .5s ease}
+  .al-item:hover img{transform:scale(1.03)}
+  .al-grid:not(.all) .al-more{display:none}
+  .al-btn{margin-top:26px;background:none;border:1px solid var(--film-warm);color:var(--film-warm);padding:13px 26px;border-radius:99px;font:600 11px 'Archivo',sans-serif;letter-spacing:.18em;cursor:pointer}
+  .al-box{position:fixed;inset:0;z-index:10003;background:rgba(14,20,40,.96);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+  .al-box.on{display:flex}
+  .al-box img{max-width:94vw;max-height:84vh;object-fit:contain;border-radius:3px;user-select:none}
+  .al-x{position:absolute;top:calc(env(safe-area-inset-top) + 12px);right:14px;width:44px;height:44px;border:0;background:none;color:#f3e6c8;font-size:34px;cursor:pointer}
+  .al-nav{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:64px;border:0;background:rgba(255,255,255,.08);color:#f3e6c8;font-size:34px;cursor:pointer;border-radius:4px}
+  .al-prev{left:8px}.al-next{right:8px}
+  .al-count{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 18px);left:0;right:0;text-align:center;color:#d9bd84;font:11px 'Archivo',sans-serif;letter-spacing:.25em}
   #previewTag{position:fixed;top:calc(env(safe-area-inset-top) + 8px);left:50%;transform:translateX(-50%);z-index:10002;background:rgba(31,43,77,.88);color:#f3e6c8;font:600 10px 'Archivo',sans-serif;letter-spacing:.22em;padding:6px 14px;border-radius:99px;pointer-events:none}
 </style>
 <link rel="stylesheet" href="gift.css?v=4"></head>
@@ -1057,6 +1075,14 @@
   </div>
 </section>
 
+<section class="album-scene" id="album" data-scene="10" data-name="THE ALBUM">
+  <div class="head" data-en="— The Album —">— Album Cưới —</div>
+  <h2 data-en="Little &lt;em&gt;moments&lt;/em&gt;">Những <em>khoảnh khắc</em></h2>
+  <div class="al-grid" id="alGrid"><a class="al-item" href="album/a01.webp" data-i="0"><img src="album/a01_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 1"></a><a class="al-item" href="album/a02.webp" data-i="1"><img src="album/a02_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 2"></a><a class="al-item" href="album/a03.webp" data-i="2"><img src="album/a03_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 3"></a><a class="al-item" href="album/a04.webp" data-i="3"><img src="album/a04_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 4"></a><a class="al-item" href="album/a05.webp" data-i="4"><img src="album/a05_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 5"></a><a class="al-item" href="album/a06.webp" data-i="5"><img src="album/a06_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 6"></a><a class="al-item" href="album/a07.webp" data-i="6"><img src="album/a07_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 7"></a><a class="al-item" href="album/a08.webp" data-i="7"><img src="album/a08_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 8"></a><a class="al-item" href="album/a09.webp" data-i="8"><img src="album/a09_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 9"></a><a class="al-item" href="album/a10.webp" data-i="9"><img src="album/a10_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 10"></a><a class="al-item" href="album/a11.webp" data-i="10"><img src="album/a11_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 11"></a><a class="al-item" href="album/a12.webp" data-i="11"><img src="album/a12_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 12"></a><a class="al-item al-more" href="album/a13.webp" data-i="12"><img src="album/a13_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 13"></a><a class="al-item al-more" href="album/a14.webp" data-i="13"><img src="album/a14_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 14"></a><a class="al-item al-more" href="album/a15.webp" data-i="14"><img src="album/a15_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 15"></a><a class="al-item al-more" href="album/a16.webp" data-i="15"><img src="album/a16_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 16"></a><a class="al-item al-more" href="album/a17.webp" data-i="16"><img src="album/a17_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 17"></a><a class="al-item al-more" href="album/a18.webp" data-i="17"><img src="album/a18_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 18"></a><a class="al-item al-more" href="album/a19.webp" data-i="18"><img src="album/a19_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 19"></a><a class="al-item al-more" href="album/a20.webp" data-i="19"><img src="album/a20_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 20"></a><a class="al-item al-more" href="album/a21.webp" data-i="20"><img src="album/a21_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 21"></a><a class="al-item al-more" href="album/a22.webp" data-i="21"><img src="album/a22_t.webp" loading="lazy" width="600" height="400" alt="Ảnh cưới Bảo Hương 22"></a><a class="al-item al-more" href="album/a23.webp" data-i="22"><img src="album/a23_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 23"></a><a class="al-item al-more" href="album/a24.webp" data-i="23"><img src="album/a24_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 24"></a><a class="al-item al-more" href="album/a25.webp" data-i="24"><img src="album/a25_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 25"></a><a class="al-item al-more" href="album/a26.webp" data-i="25"><img src="album/a26_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 26"></a><a class="al-item al-more" href="album/a27.webp" data-i="26"><img src="album/a27_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 27"></a><a class="al-item al-more" href="album/a28.webp" data-i="27"><img src="album/a28_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 28"></a><a class="al-item al-more" href="album/a29.webp" data-i="28"><img src="album/a29_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 29"></a><a class="al-item al-more" href="album/a30.webp" data-i="29"><img src="album/a30_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 30"></a><a class="al-item al-more" href="album/a31.webp" data-i="30"><img src="album/a31_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 31"></a><a class="al-item al-more" href="album/a32.webp" data-i="31"><img src="album/a32_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 32"></a><a class="al-item al-more" href="album/a33.webp" data-i="32"><img src="album/a33_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 33"></a><a class="al-item al-more" href="album/a34.webp" data-i="33"><img src="album/a34_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 34"></a><a class="al-item al-more" href="album/a35.webp" data-i="34"><img src="album/a35_t.webp" loading="lazy" width="400" height="600" alt="Ảnh cưới Bảo Hương 35"></a></div>
+  <button class="al-btn" id="alMore" type="button" data-en="See all 35 photos">Xem hết 35 ảnh</button>
+</section>
+<div class="al-box" id="alBox" aria-hidden="true"><button class="al-x" id="alX" type="button" aria-label="Đóng">×</button><button class="al-nav al-prev" id="alPrev" type="button" aria-label="Ảnh trước">‹</button><img id="alImg" alt=""><button class="al-nav al-next" id="alNext" type="button" aria-label="Ảnh sau">›</button><div class="al-count" id="alCount"></div></div>
+
 <section class="intermission" data-scene="11" data-name="CHAPTER IV">
   <div class="num-big" data-rom="IV">IV</div>
   <div class="label"><span class="ch-no">Chapter Four</span><span class="ch-name">The Invitation</span></div>
@@ -1178,6 +1204,21 @@
   <button class="lx-toggle" id="giftToggle" type="button" aria-expanded="false" aria-controls="giftCard" data-en="TAP TO OPEN THE ENVELOPE">CHẠM ĐỂ MỞ BAO LÌ XÌ</button>
  </section>
 <script src="gift.js?v=4"></script>
+<script>
+(function(){var g=document.getElementById('alGrid'),btn=document.getElementById('alMore'),box=document.getElementById('alBox'),img=document.getElementById('alImg'),cnt=document.getElementById('alCount');
+var items=[].slice.call(g.querySelectorAll('.al-item')),i=0,x0=null;
+btn.onclick=function(){g.classList.add('all');btn.remove();};
+function show(n){i=(n+items.length)%items.length;img.src=items[i].getAttribute('href');cnt.textContent=(i+1)+' / '+items.length;}
+items.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();show(k);box.classList.add('on');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';});});
+function close(){box.classList.remove('on');box.setAttribute('aria-hidden','true');document.body.style.overflow='';img.removeAttribute('src');}
+document.getElementById('alX').onclick=close;document.getElementById('alPrev').onclick=function(){show(i-1)};document.getElementById('alNext').onclick=function(){show(i+1)};
+box.addEventListener('click',function(e){if(e.target===box)close();});
+document.addEventListener('keydown',function(e){if(!box.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+box.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+box.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)show(i+(dx<0?1:-1));x0=null;});
+})();
+</script>
+
 <button id="toTop" type="button" aria-label="Lên đầu thiệp"><svg viewBox="0 0 24 24"><path d="M6 15l6-6 6 6"/></svg></button>
 <div id="langSw"><button type="button" data-l="vi" class="on">VI</button><button type="button" data-l="en">EN</button></div>
 
@@ -1216,7 +1257,7 @@
   });
 
   /* ===== ẢNH GỐC: tối ưu WebP cho thiệp ===== */
-  var PHOTOS = {hero:'hero.webp',s1:'scene1.webp',s2:'together.webp',s3:'scene2.webp',s4:'scene4.webp',bride:'bride.webp',groom:'groom.webp'};
+  var PHOTOS = {hero:'hero.webp',s1:'scene1.webp',s2:'together.webp',s3:'scene2.webp',s4:'scene4.webp',bride:'bride.webp?v=2',groom:'groom.webp?v=2'};
   document.querySelectorAll('[data-photo]').forEach(function(el){
     var src = PHOTOS[el.dataset.photo];
     if (el.tagName === 'IMG'){

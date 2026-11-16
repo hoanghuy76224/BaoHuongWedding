@@ -932,13 +932,21 @@
   .al-prev{left:8px}.al-next{right:8px}
   .al-count{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 18px);left:0;right:0;text-align:center;color:#d9bd84;font:11px 'Archivo',sans-serif;letter-spacing:.25em}
   #previewTag{position:fixed;top:calc(env(safe-area-inset-top) + 8px);left:50%;transform:translateX(-50%);z-index:10002;background:rgba(31,43,77,.88);color:#f3e6c8;font:600 10px 'Archivo',sans-serif;letter-spacing:.22em;padding:6px 14px;border-radius:99px;pointer-events:none}
+
+  /* Feedback from the couple: keep the longer transition readable on phones. */
+  .story-transition .subtitle{width:min(86%,760px);font-size:clamp(18px,2vw,28px);line-height:1.5}
+  .story-transition::after{background:linear-gradient(180deg,transparent 38%,rgba(246,239,230,.45) 65%,rgba(246,239,230,.95) 100%)}
+  @media(max-width:600px){
+    .story-transition .subtitle{bottom:12vh;font-size:18px;line-height:1.45}
+    .story-transition [data-photo="s1"]{background-position:center 32%}
+  }
 </style>
 <link rel="stylesheet" href="gift.css?v=4"><style>
 .memory-story{background:#f5efe5;color:#273453;padding:clamp(56px,9vw,110px) 24px;scroll-margin-top:60px}
 .memory-story h2,.memory-story p{max-width:620px;margin:0 auto}
 .memory-story h2{font:500 clamp(32px,5vw,54px)/1.12 'Fraunces',serif;margin-bottom:30px}
 .memory-story p{font:400 clamp(18px,2vw,22px)/1.65 'Fraunces',serif;margin-bottom:1em}
-@media (max-aspect-ratio:1/1){.scene[data-scene="09"]{max-height:150vw}.scene [data-photo="s3"]{background-position:69% center!important}}
+@media (max-aspect-ratio:1/1){.scene[data-scene="09"]{max-height:150vw}.scene [data-photo="s3"]{background-position:center center!important}}
 </style>
 <style>.memory-photo{max-width:800px;margin:32px auto}.memory-photo img{width:100%;height:auto;display:block}.memory-frame{position:relative}.memory-pin{position:absolute;bottom:59%;border-radius:3px;padding:3px 7px;background:#fff7e9;color:#263454;font:600 clamp(10px,1.4vw,14px)/1.2 sans-serif}.memory-pin:after{content:"";position:absolute;top:100%;border:4px solid transparent;border-top-color:#fff7e9}.groom-pin{right:30.4%}.groom-pin:after{right:0}.bride-pin{left:74.6%}.bride-pin:after{left:0}.memory-photo figcaption{max-width:620px;margin:22px auto 0;font:italic 19px/1.6 'Fraunces',serif}</style><style>
 .memory-photo:has(.memory-frame){overflow:hidden}
@@ -1021,20 +1029,16 @@
 <section class="intermission" data-scene="03" data-name="CHAPTER I">
   <div class="num-big" data-rom="I">I</div>
   <div class="label"><span class="ch-no">Chapter One</span><span class="ch-name">How We Met</span></div>
-  <p class="quote" data-en="&quot;One from Ha Tinh, one from Dak Lak. Miles apart, and still we found our way to each other.&quot;">"Một người Hà Tĩnh, một người Đắk Lắk. Xa vậy mà rồi cũng tìm được đường về với nhau."</p>
+  <p class="quote" data-en="Fate wove a gentle thread;<br>Tien Phong led me to your heart.">Duyên trời se sợi tơ mềm<br>Tiền Phong dẫn lối anh vào tim em</p>
 </section>
 
-<section id="chuyen-tui-minh" class="memory-story" aria-labelledby="memory-title"><h2 id="memory-title" data-en="Our first photo together">Bức ảnh đầu tiên</h2><figure class="memory-photo"><div class="memory-frame"><img src="image(20261116-050732).png" alt="Bảo và Hương ở hàng đứng, người thứ tư và thứ ba từ phải sang"><span class="memory-pin groom-pin" aria-hidden="true">Bảo</span><span class="memory-pin bride-pin" aria-hidden="true">Hương</span></div></figure><p data-en="Our first photo together was a group photo, with so many other people in the frame.">Bức ảnh đầu tiên tụi mình chụp cùng nhau lại chẳng phải là một bức ảnh riêng của hai đứa, mà là tấm hình tập thể với rất nhiều người.</p>
-<p data-en="Looking at all those faces, who could have guessed how much of a story those two people would share?">Ngày ấy, giữa bao nhiêu gương mặt trong bức hình, có lẽ chẳng ai ngờ rằng hai con người đứng chung một khung ảnh rồi sẽ có một câu chuyện dài đến vậy.</p>
-<p data-en="Since that ordinary photo, we’ve shared years of loving each other from afar, journeys, reunions, and storms we thought we might never weather.">Từ một tấm hình chẳng có gì đặc biệt, tụi mình đã cùng nhau đi qua vài năm yêu xa, qua những chuyến đi, những lần gặp gỡ và cả những sóng gió tưởng chừng chẳng thể vượt qua.</p>
-<p data-en="Looking back today, it feels a little wondrous…">Để rồi hôm nay nhìn lại, mới thấy thật kỳ lạ…</p>
-<p data-en="Our story was already there, in the same frame, all those years ago.">Hóa ra, câu chuyện của tụi mình đã bắt đầu được lưu giữ trong cùng một khung hình từ ngày ấy.</p><figure class="memory-photo"><img loading="lazy" src="image(20261116-051205).png" alt="Bảo và Hương đứng cạnh nhau tại lễ tổng kết của Nhựa Tiền Phong"><figcaption data-en="In the first photo, you might need us to point ourselves out. This time we’re easier to find. It’s still Bảo beside Hương, only now we have the frame to ourselves.">Ở tấm đầu, chắc tụi mình phải chỉ thì mọi người mới tìm ra. Còn tấm này dễ hơn rồi. Vẫn là Bảo đứng cạnh Hương, lần này khung hình dành riêng cho hai đứa.</figcaption></figure></section>
+<section id="chuyen-tui-minh" class="memory-story" aria-labelledby="memory-title"><h2 id="memory-title" data-en="Our first photo together">Bức ảnh đầu tiên</h2><figure class="memory-photo"><div class="memory-frame"><img src="image(20261116-050732).png" alt="Bảo và Hương ở hàng đứng, người thứ tư và thứ ba từ phải sang"><span class="memory-pin groom-pin" aria-hidden="true">Bảo</span><span class="memory-pin bride-pin" aria-hidden="true">Hương</span></div></figure><p data-en="Our first photo together wasn’t a photo of just the two of us, but a group picture with many other people.">Bức ảnh đầu tiên tụi mình chụp cùng nhau lại chẳng phải là một bức ảnh riêng của hai đứa, mà là tấm hình tập thể với rất nhiều người.</p>
+<p data-en="Back then, we met through work, as people from two partner companies. Who could have imagined that a meeting seemingly only about work would open such a long story...">Cuộc gặp gỡ ngày ấy diễn ra khi hai đứa còn là những người đến từ hai công ty đối tác, cùng làm việc với nhau. Có lẽ chẳng ai ngờ rằng, từ một cuộc gặp gỡ tưởng chừng chỉ liên quan đến công việc, lại mở ra một câu chuyện dài đến vậy...</p><figure class="memory-photo"><img loading="lazy" src="image(20261116-051205).png" alt="Bảo và Hương đứng cạnh nhau tại lễ tổng kết của Nhựa Tiền Phong"><figcaption data-en="In the first photo, you might need us to point ourselves out. This time we’re easier to find. It’s still Bảo beside Hương, only now we have the frame to ourselves.">Ở tấm đầu, chắc tụi mình phải chỉ thì mọi người mới tìm ra. Còn tấm này dễ hơn rồi. Vẫn là Bảo đứng cạnh Hương, lần này khung hình dành riêng cho hai đứa.</figcaption></figure></section>
 
-<section class="scene" data-scene="04" data-name="THE GLANCE">
+<section class="scene story-transition" data-scene="04" data-name="THE GLANCE">
   <div class="scene-img" data-photo="s1" data-label="Ảnh cảnh 04"></div>
   <div class="subtitle">
-    <span class="speaker">— Hương</span>
-    <span data-en="&quot;He doesn&#x27;t say much, but he never forgets the little things.&quot;">"Anh ít nói, nhưng chuyện nhỏ nào của em cũng nhớ."</span>
+    <span data-en="And today, that story begins a new chapter.<br><br>No longer two people who happened to stand together in a photo, but two people who choose to hold hands and share a journey.">Và hôm nay, câu chuyện ấy bước sang một chương mới.<br><br>Không còn là hai người tình cờ đứng cạnh nhau trong một khung hình, mà là hai người chọn nắm tay nhau đi chung một hành trình.</span>
     
   </div>
 </section>
@@ -1042,8 +1046,7 @@
 <section class="scene" data-scene="05" data-name="THE WALK">
   <div class="scene-img" data-photo="s2" data-label="Ảnh cảnh 05"></div>
   <div class="subtitle">
-    <span class="speaker">— Bảo</span>
-    <span data-en="&quot;One smile from her and the whole day&#x27;s tiredness is gone.&quot;">"Em cười một cái là bao mệt mỏi trong ngày bay hết."</span>
+    <span data-en="Thank you for finding each other!">Cảm ơn vì đã gặp được nhau!</span>
     
   </div>
 </section>
@@ -1212,7 +1215,7 @@
   <div class="lx-stage" id="giftStage">
    <div class="lx-env">
     <div class="lx-card" id="giftCard" aria-hidden="true" inert>
-     <span class="lx-eyebrow" data-en="FOR THE BRIDE">MỪNG CƯỚI CÔ DÂU</span>
+     <span class="lx-eyebrow" data-en="FOR THE BRIDE &amp; GROOM">Mừng cưới cô dâu &amp; chú rể</span>
      <h3>Lê Thị Kim Hương</h3>
      <img id="giftQR" src="qr-kim-huong.png" alt="Mã VietQR MB Bank, tài khoản 0935857258" loading="lazy" width="260" height="260">
      <p class="lx-bank">MB BANK</p><strong class="lx-acc">0935857258</strong>
@@ -1280,7 +1283,7 @@ box.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changed
   });
 
   /* ===== ẢNH GỐC: tối ưu WebP cho thiệp ===== */
-  var PHOTOS = {hero:'hero.webp',s1:'scene1.webp',s2:'together.webp',s3:'scene2.webp',s4:'scene4.webp',bride:'bride.webp?v=2',groom:'groom.webp?v=2'};
+  var PHOTOS = {hero:'album/a23.webp',s1:'together.webp',s2:'album/a17.webp',s3:'album/a07.webp',s4:'album/a23.webp',bride:'bride.webp?v=2',groom:'groom.webp?v=2'};
   document.querySelectorAll('[data-photo]').forEach(function(el){
     var src = PHOTOS[el.dataset.photo];
     if (el.tagName === 'IMG'){

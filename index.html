@@ -906,6 +906,13 @@
   .reel-countdown{background:linear-gradient(180deg,#efeaf4,#f6efe6)!important}
   .reel-num{border-color:rgba(142,134,184,.45)!important}
   .wish-scene{background:#efeaf4}
+  .hero-subtitle{white-space:nowrap;font-size:clamp(9px,2.9vw,16px)!important;letter-spacing:.2em!important}
+  .subtitle{text-shadow:0 1px 10px rgba(255,255,255,.95),0 0 2px rgba(255,255,255,.9)}
+  .subtitle .speaker{color:#7a5a2f!important}
+  @media (max-width:600px){.hero-scene{padding-bottom:calc(5.5vh + 112px)!important}}
+  @media (max-width:600px){.scene .subtitle{width:80%!important;bottom:calc(5.5vh + 120px)!important}}
+  @media (min-aspect-ratio:1/1){.hero-scene .scene-img{background-position:center 30%!important}}
+  @media (max-width:600px){#previewTag{top:calc(env(safe-area-inset-top) + 50px)!important}}
   #previewTag{position:fixed;top:calc(env(safe-area-inset-top) + 8px);left:50%;transform:translateX(-50%);z-index:10002;background:rgba(31,43,77,.88);color:#f3e6c8;font:600 10px 'Archivo',sans-serif;letter-spacing:.22em;padding:6px 14px;border-radius:99px;pointer-events:none}
 </style>
 <link rel="stylesheet" href="gift.css?v=4"></head>
@@ -1163,7 +1170,7 @@
      <div class="lx-actions"><button id="copyAccount" type="button" data-en="Copy number">Chép số TK</button><button id="saveQR" type="button" data-en="Save QR">Lưu mã QR</button></div>
      <p class="lx-status" id="giftStatus" aria-live="polite"></p>
     </div>
-    <img class="lx-front" src="lixi-front.webp?v=1" alt="Bao lì xì Trăm năm hạnh phúc, Bảo và Hương">
+    <img class="lx-front" src="lixi-front.webp?v=2" alt="Bao lì xì Trăm năm hạnh phúc, Bảo và Hương">
     <img class="lx-flap" src="lixi-flap.webp?v=1" alt="">
     <button id="openGift" class="lx-hit" type="button" aria-expanded="false" aria-controls="giftCard" aria-label="Mở bao lì xì xem mã QR"></button>
    </div>
@@ -1181,7 +1188,7 @@
   </button>
 </div>
 <audio id="bgmAudio" loop preload="auto">
-  <source src="music.m4a" type="audio/mp4">
+  <source src="music.m4a?v=2" type="audio/mp4">
 </audio>
 
 <script src="invite-links.js"></script>

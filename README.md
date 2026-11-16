@@ -1,13 +1,13 @@
 # Văn Bảo & Kim Hương
 
-Thiệp cưới online theo phong cách cinematic của mẫu Hoàng–Như, phối màu xanh olive theo thiệp giấy.
+Adapted directly from `hoanghuy76224/HoangNhuWedding` as requested. The original CSS, floral gate, wax seal, opening video, cinematic scenes, animations, VI/EN controls, RSVP form and integrated admin layout are retained.
 
-Ngày tiệc: 13/12/2026. Đón khách 11:00, khai tiệc 12:00. Vườn Cau, Sảnh 7 – Lily, 360 Phan Văn Trị, P. Bình Lợi Trung, TP. HCM.
+Only couple names, parents, photographs, venue and event times are changed. A QR gift envelope is added after the RSVP section. The previous custom redesign is no longer used.
 
-Website tĩnh, không cần build. Tải toàn bộ các file lên Cloudflare Pages hoặc bật GitHub Pages từ nhánh main, thư mục gốc.
+Reception: Sunday 13 December 2026. Guest arrival 11:00, reception 12:00. Vườn Cau, Hall 7 – Lily, 360 Phan Văn Trị, P. Bình Lợi Trung, TP.HCM.
 
-Tạo link cá nhân hóa bằng `?to=` và tên khách đã encode bằng `encodeURIComponent`.
+Personalized links use `?to=`. The administration view is `#admin`. RSVP and invitation namespaces are `rsvp_baohuong` and `invites_baohuong`, separate from Hoàng–Như. Existing Firebase permissions determine whether these new collections can be used; no rules are changed by this repository. The inherited front-end admin password is only a UI gate, not server-side authorization.
 
-Ảnh từ album Drive được cung cấp. QR VietQR dựng theo ngân hàng MB và tài khoản 0935857258 trên ảnh cô dâu gửi; chưa xác minh tên người nhận bằng ứng dụng ngân hàng. Nhạc nền hiện dùng cùng bài của mẫu Hoàng–Như và chỉ phát sau khi khách mở thiệp.
+The opening video is stored in this repo. Background music currently references the original site's music file. Photos are from the supplied Drive album. QR is rendered for MB Bank account 0935857258 from the bride's supplied details; bank account ownership has not been looked up.
 
-Không sử dụng cơ sở dữ liệu, thông tin khách hoặc mật khẩu admin của cặp đôi trong mẫu. Bản này có bản đồ, lịch hẹn, đếm ngược, album và bao lì xì QR.
+Static publishing: GitHub Pages, branch main, root directory. No build needed. Original design credit: HoangNhuWedding / Dino Studio.

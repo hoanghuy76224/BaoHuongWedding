@@ -12,4 +12,4 @@ Lễ báo hỷ: Chủ Nhật 13/12/2026, đón khách 11:00, khai tiệc 12:00. 
 
 RSVP: Firestore collection `rsvp_baohuong`. Link riêng dùng `?to=`. Nhạc nền `music.m4a` nằm trong repo.
 
-Bản hiện tại có nhãn BẢN XEM THỬ (`#previewTag` trong index.html). Khách thanh toán xong thì xoá dòng đó.
+Đã gỡ nhãn BẢN XEM THỬ (khách đã thanh toán).
